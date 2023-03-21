@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Container, AlbumGrid, AlbumCard, Cover} from '../css/GalleryElements';
 import AlbumsPage from './AlbumsPage';
 import { useStickyState } from '../scripts/helpers.js';
-import { setPhotos } from "../actions/photos";
+import { set_photos, set_current_photo, set_albums, set_selected_album } from '../reducers/photosSlice';
 
 
 const GalleryPage = () => {
@@ -63,7 +63,12 @@ const GalleryPage = () => {
     if (albumView) {setAlbumView(false)};
     setSelectedAlbum(album);
     const photos = album.photos.map(photo => photo.src);
-    dispatch(setPhotos(photos)); 
+    console.log(photos);
+    console.log(albums);
+    console.log(album);
+    dispatch(set_photos(photos)); 
+    dispatch(set_albums(albums)); 
+    dispatch(set_selected_album(album)); 
   };
 
   return (
@@ -72,8 +77,8 @@ const GalleryPage = () => {
       <AlbumGrid>
         {albums.map((album) => {
           return (
-          <AlbumCard key={album.id}>
-            <Cover key={album.id} src={album.photos[0].src} onClick={() => handleAlbumClick(album)}></Cover>
+          <AlbumCard key={album.id} onClick={() => handleAlbumClick(album)}>
+            <Cover key={album.id} src={album.photos[0].src}></Cover>
             <p>{album.name}</p>
           </AlbumCard>
         )})}

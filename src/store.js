@@ -1,10 +1,9 @@
-import { createStore, combineReducers } from "redux";
-import photosReducer from "./reducers/modal";
+import { configureStore } from '@reduxjs/toolkit'
+import photosReducer from './reducers/photosSlice'
 
-const rootReducer = combineReducers({
-  photos: photosReducer,
-});
 
-const store = createStore(rootReducer);
-
-export default store;
+export default configureStore({
+  reducer: {
+    photos: photosReducer,
+  },
+})

@@ -7,20 +7,66 @@ export const Container = styled.div`
 `;
 
 export const AlbumGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  margin: 100px 40px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2vw;
+  margin: 3vw;
+  padding-top: 5vw;
 `;
 
 export const AlbumCard = styled.div`
-  width: 100%;
-  height: auto;
+  width: 30vw;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 2px 3px 12px 0px #a99685;
+  border-radius: 10px;
+
+
+  p {
+    font-size: 1.2vw;
+    position: absolute;
+    bottom: 0vw;
+    background: rgba(200, 229, 216, 0.9);
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 1vw 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  &:hover p {
+    background: rgba(165, 213, 204, 0.9);
+  }
+`;
+
+export const Cell = styled.div`
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 10vw;
+  position: relative;
 `;
 
 export const Cover = styled.img`
   width: 100%;
   height: auto;
+  overflow: hidden;
+  height: 17vw;
+  object-fit: cover;
+
+  border-radius: 10px;
+`;
+
+export const AlbumsPageContent = styled.div`
+  padding-top: 5vw;
 `;
 
 export const AlbumList = styled.div`
@@ -31,24 +77,29 @@ export const AlbumList = styled.div`
 `;
 
 export const Album = styled.div`
-  background-color: #f1f1f1;
-  padding: 10px;
-  margin: 10px;
+  background-color: #d9ede5;
+  border-radius: 10vw;
+  padding: 1vw;
+  margin: 1vw;
   cursor: pointer;
+
   &:hover {
-    background-color: #ddd;
+    background-color: #c8e5d8;
+  }
+  &:active {
+    background-color: #a5d5cc;
   }
 `;
 
 export const PhotoGrid = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.2vw;
+  margin: 3vw 9.7vw;
 `;
 
 export const Photo = styled.img`
-  max-width: 20%;
-  max-height: 80vh;
-  object-fit: contain;
-  margin: 20px;
+  width: 100%;
+  height: auto;
 `;

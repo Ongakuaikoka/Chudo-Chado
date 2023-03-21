@@ -1,5 +1,11 @@
 import React from "react";
-import { Logo, Nav, NavItemDropdown, NavMenu, NavLink, Dropdown, DropdownItem, NavItem, DropdownLink } 
+
+import chick from '../logos/chick_logo.png';
+import {ReactComponent as ChudoChadoCentre} from '../logos/chudo-chado-centre.svg';
+import {ReactComponent as Phone} from '../logos/phone.svg';
+import {ReactComponent as Vk} from '../logos/vkSVG.svg';
+import {ReactComponent as Instagram} from '../logos/instagram.svg';
+import { Logo, Chick, Nav, NavItemDropdown, NavMenu, NavLink, Dropdown, DropdownItem, NavItem, DropdownLink, PhoneNumber } 
     from "../css//NavbarElements";
 
 const Navbar = () => {
@@ -13,32 +19,49 @@ const Navbar = () => {
   };
   return (
     <Nav>
-      <Logo href="/">CHUDO-CHADO</Logo>
+      <Logo  id="nav_logo" href="/">
+        <img src={chick}></img>
+        <ChudoChadoCentre/>
+        {/* <Chick src={chick} alt='logo'></Chick> */}
+      </Logo>
+      
       <NavMenu>
         <NavItemDropdown>
-          <NavLink href="#">Courses</NavLink>
+          <NavLink href="#">Программы</NavLink>
           <Dropdown>
             <DropdownItem>
-              <DropdownLink href="/english">English</DropdownLink>
+              <DropdownLink href="/english">Английский язык</DropdownLink>
             </DropdownItem>
             <DropdownItem>
-              <DropdownLink href="/early">Early Development</DropdownLink>
+              <DropdownLink href="/early">Раннее развитие </DropdownLink>
             </DropdownItem>
             <DropdownItem>
-              <DropdownLink href="/preschool">Pre-School</DropdownLink>
+              <DropdownLink href="/preschool">Дошкольная подготовка</DropdownLink>
             </DropdownItem>
           </Dropdown>
         </NavItemDropdown>
         <NavItem>
-          <NavLink href="/gallery" onClick={handleGalleryStorage}>Gallery</NavLink>
+          <NavLink href="/">Летний лагерь</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/about">About Us</NavLink>
+          <NavLink href="/">Преподаватели</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/contact">Contacts</NavLink>
+          <NavLink href="/gallery" onClick={handleGalleryStorage}>Фотогалерея</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/about">О нас</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/contact">Контакты</NavLink>
         </NavItem>
       </NavMenu>
+      <PhoneNumber>
+        <Phone />
+        <p>214-24-86</p>
+        <a href="https://vk.com/chudochado_nsk" target="_blank" rel="noreferrer"><Vk /></a>
+        <a href="https://www.instagram.com/chudochadonsk/" target="_blank" rel="noreferrer"><Instagram /></a>
+      </PhoneNumber>
     </Nav>
   );
 };
