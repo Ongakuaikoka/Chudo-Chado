@@ -5,9 +5,15 @@ import VerdanaBold from "./fonts/verdana-bold.ttf";
 const FontStyles = createGlobalStyle`
 
 @font-face {
-  font-family: 'Roboto Condensed';
-  src: url(${Verdana}) format('ttf'),
-       url(${VerdanaBold}) format('ttf');
+  font-family: 'Verdana';
+  src: url(${Verdana}) format('ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url(${VerdanaBold}) format('ttf');
+  font-weight: 700;
 }
 
 body {

@@ -1,5 +1,6 @@
 import React from "react";
 import { Wrapper, Advantages, Advantage } from '../css/AdvantagesElements';
+import {ReactComponent as Bulb} from '../logos/bulb.svg';
 
 const AdvantagesList = ({  }) => {
     const advantages = [
@@ -32,7 +33,11 @@ const AdvantagesList = ({  }) => {
         <Advantages>
             {advantages.map((advantage) => (
                 <Advantage key={advantage.id}>
-                    <h1>{advantage.name}</h1>
+                    <div>
+                        <Bulb />
+                        <h1>{advantage.name}</h1>
+                    </div>
+                    
                     <p>{advantage.text}</p>
                 </Advantage>
             ))}

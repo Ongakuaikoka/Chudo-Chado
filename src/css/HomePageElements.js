@@ -9,6 +9,7 @@ export const Home = styled.div`
     font-size: 3em;
     margin-top: 1em;
     margin-bottom: 0.5em;
+    font-weight: normal;
   }
 
   p {
@@ -57,6 +58,7 @@ export const MainText = styled.div`
   h1 {
     font-size: 4.5vw;
     margin: 2vw 3vw 1vw 8vw;
+    font-weight: normal;
   }
 
   p {

@@ -10,6 +10,7 @@ import {ReactComponent as BigCloudSVG} from '../logos/Big_Cloud.svg';
 import {ReactComponent as SmallCloudSVG} from '../logos/Small_Cloud.svg';
 import CoursesSwitcher from "./CoursesSwitcher";
 import AdvantagesList from "./AdvantagesList";
+import Map from "./Map";
 
 const HomePage = () => {
 
@@ -64,9 +65,11 @@ const HomePage = () => {
         </MainText>
 
       </Background>
-
+      <a name="programs"></a>
       <CoursesSwitcher />
+      <a name="about"></a>
       <AdvantagesList />
+      <Map />
       <div style={{height: '1000px'}}></div>
     </Home>
   );

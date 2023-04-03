@@ -9,6 +9,7 @@ export const GroupsWrapper = styled.div`
         font-size: 3.5vw;
         margin-top: 1vw;
         margin-bottom: 1vw;
+        font-weight: normal;
     }
 
     p {
@@ -41,6 +42,8 @@ export const AgeGroups = styled.div`
     &:nth-child(2) {
         border-right-style: solid;
         border-left-style: solid;
+        border-width: 0.15vw;
+
     }
 
     &:nth-child(3) {
@@ -64,6 +67,8 @@ export const Courses = styled.div`
     margin: 3vw 8.66vw;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    justify-content: space-evenly;
+
 
     &::-webkit-scrollbar {
         display: none;
@@ -76,7 +81,7 @@ export const Course = styled.div`
 `;
 
 export const Cell = styled.div`
-    width: 15vw;
+    width: 14.8vw;
     display: flex;
     padding: 2vw;
     -webkit-box-pack: center;
@@ -86,7 +91,7 @@ export const Cell = styled.div`
     background-color: white;
 
     border-style: solid;
-    border-width: 1px;
+    border-width: 0.1vw;
     border-radius: 20px;
     border-color: #2c1204;
 
@@ -94,7 +99,7 @@ export const Cell = styled.div`
         text-align: center;
 
         &:nth-child(2) {
-            width: 50%;
+            width: 70%;
             margin: 2vw auto 1vw;
             border-radius: 10vw;
             cursor: default;
@@ -108,7 +113,7 @@ export const Cell = styled.div`
         p {
             font-size: 1vw;
             position: relative;
-            top: -1.6vw;
+            top: -1.8vw;
             margin: 0;
         }
     }

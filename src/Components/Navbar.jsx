@@ -27,7 +27,7 @@ const Navbar = () => {
       
       <NavMenu>
         <NavItemDropdown>
-          <NavLink href="#">Программы</NavLink>
+          <NavLink href="#programs">Программы</NavLink>
           <Dropdown>
             <DropdownItem>
               <DropdownLink href="/english">Английский язык</DropdownLink>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <NavLink href="/gallery" onClick={handleGalleryStorage}>Фотогалерея</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/about">О нас</NavLink>
+          <NavLink href="#about">О нас</NavLink>
         </NavItem>
         <NavItem>
           <NavLink href="/contact">Контакты</NavLink>
